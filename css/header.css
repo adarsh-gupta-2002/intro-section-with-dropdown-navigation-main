@@ -1,0 +1,155 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 1rem  1rem 2rem;
+}
+
+.nav{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    right: -1rem;
+    top: -1rem;
+    background: #fff;
+    width: 72%;
+    padding:4.5rem 1rem 0;
+}
+ 
+/* arrow */
+.arrow{
+    width: 12px;
+}
+
+/* links */
+.link{    
+    padding: 1rem;
+}
+.link span{
+    margin-right: 0.2rem;
+}
+.sub-links{
+    display: none;
+}
+ 
+.sub-links-container{
+    padding: 1rem;
+}
+
+.sub-link{
+    padding: 0.5rem;
+}
+.link:hover .arrow{
+    filter: brightness(0);
+    transform: rotate(180deg);
+}
+
+.link a:Hover ,
+li:hover,
+.logIn:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+}
+.link:hover .sub-links{
+    display: block;
+}
+
+/* buttons */
+.menu-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.close-menu-btn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+
+}
+
+
+.nav-buttons{
+    margin-top: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.register{
+    border: 2px solid gray;
+    padding: .5em 1em;
+    border-radius: 15px;
+}
+.register:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+    border-color: hsl(0, 0%, 8%);
+}
+ 
+ 
+ 
+@media(min-width:800px){
+    .header{
+        gap: 2rem;
+    }
+
+    .menu-btn{
+        display: none;
+    }
+    .nav{
+        display: block;
+        position: unset;
+        height: unset;
+        background:unset;
+        width:92%;
+        min-width: 600px;
+        padding:0;
+      
+    }
+    
+
+
+    .nav-links{
+        display: flex;
+        float: left;
+
+    }
+    .sub-links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    
+    .link{
+        position: relative;
+    }
+    .sub-links-container{
+        margin-top: 0.3rem;
+        background: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 5px rgba(0 , 0 , 0 , 0.3) ,-2px -2px 5px rgba(0 , 0 , 0 , 0.3);
+        width: 130px;
+    }
+    .sub-link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* buttons */
+    
+    .nav-buttons{
+        float: right;
+        flex-direction: row;
+        margin-top: 0.4rem;
+    }
+
+
+}
